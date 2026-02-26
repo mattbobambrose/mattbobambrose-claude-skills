@@ -125,9 +125,11 @@ One paragraph explaining what this skill does and when to use it.
 
 - **Steps** should be numbered and use bold for the step title.
 - **Important** section lists constraints, safety rules, and things the skill must never do.
+- Additional sections (e.g., `## Argument format`, `## Scope`, `## Formatting rules`) are fine when a skill needs them — `## Steps` is required, other sections are at your discretion.
 - Keep descriptions concise and action-oriented.
 - Only include tools in `allowed-tools` that the skill actually needs.
 - Remove the `argument-hint` field entirely if the skill takes no arguments.
+- Always quote `argument-hint` values in the frontmatter (e.g., `argument-hint: "[file-path]"`).
 
 ## Updating marketplace.json
 
