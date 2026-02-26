@@ -1,6 +1,6 @@
 {
   "name": "kotlin-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies",
   "author": {
     "name": "mattbobambrose"

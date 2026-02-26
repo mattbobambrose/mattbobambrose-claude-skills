@@ -143,7 +143,7 @@ Before submitting a pull request, verify the following:
 - [ ] `plugin.json` is valid JSON with `name`, `version`, `description`, and `author` fields
 - [ ] Each skill has a `SKILL.md` file at `plugins/<name>/skills/<skill-name>/SKILL.md`
 - [ ] Each `SKILL.md` has valid frontmatter with at least `name` and `description`
-- [ ] The `SKILL.md` body includes a `## Steps` section and a `## Important` section
+- [ ] The `SKILL.md` body includes a `## Steps` section (recommended: also include a `## Important` section for constraints)
 - [ ] New plugins are registered in `.claude-plugin/marketplace.json`
 - [ ] The `README.md` plugin catalog table and per-plugin sections are updated
 - [ ] All names use kebab-case (lowercase letters and hyphens only)

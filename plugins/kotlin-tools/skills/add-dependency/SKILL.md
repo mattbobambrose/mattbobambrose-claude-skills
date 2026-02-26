@@ -1,7 +1,7 @@
 ---
 name: add-dependency
 description: Add a Maven dependency to the Kotlin project's Gradle version catalog and build file
-argument-hint: <group:artifact> [group:artifact ...]
+argument-hint: "<group:artifact> [group:artifact ...]"
 allowed-tools:
 
 - Bash

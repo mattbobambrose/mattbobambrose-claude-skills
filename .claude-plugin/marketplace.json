@@ -42,7 +42,7 @@
       "name": "kotlin-tools",
       "source": "./plugins/kotlin-tools",
       "description": "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": { "name": "mattbobambrose" },
       "category": "development"
     },
@@ -50,7 +50,7 @@
       "name": "hello-world",
       "source": "./plugins/hello-world",
       "description": "Generate a hello world program in any language",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": { "name": "mattbobambrose" },
       "category": "development"
     },
