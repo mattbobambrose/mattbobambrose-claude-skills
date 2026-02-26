@@ -16,6 +16,20 @@ To install an individual plugin:
 /plugin install code-quality@mambrose-claude-skills
 ```
 
+## Updating Plugins
+
+Update all plugins from this marketplace:
+
+```
+/plugin marketplace update mambrose-claude-skills
+```
+
+Update a single plugin:
+
+```
+/plugin update code-quality@mambrose-claude-skills
+```
+
 ## Plugin Catalog
 
 | Plugin | Description | Skills | Category |
