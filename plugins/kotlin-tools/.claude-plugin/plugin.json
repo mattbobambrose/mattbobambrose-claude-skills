@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies",
   "author": {
-    "name": "mambrose"
+    "name": "mattbobambrose"
   }
 }

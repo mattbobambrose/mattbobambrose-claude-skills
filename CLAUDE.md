@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repo Is
 
-A Claude Code marketplace repository. Users add it with `/plugin marketplace add mambrose/mambrose-claude-skills` and install plugins via the `/plugin` interface. There is no build system, no tests, and no application code — only plugin metadata and skill definitions.
+A Claude Code marketplace repository. Users add it with `/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills` and install plugins via the `/plugin` interface. There is no build system, no tests, and no application code — only plugin metadata and skill definitions.
 
 ## Architecture
 

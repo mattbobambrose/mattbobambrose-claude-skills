@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Set up mambrose-claude-skills as a Claude Code marketplace repo with 18 skills grouped into 7 plugins.
+**Goal:** Set up mattbobambrose-claude-skills as a Claude Code marketplace repo with 18 skills grouped into 7 plugins.
 
 **Architecture:** Git-based marketplace using Claude Code's native plugin system. A root `marketplace.json` catalogs 7 plugins, each containing grouped skills copied from `~/git/claude-skills/`.
 
@@ -22,10 +22,10 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
 ```json
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "mambrose-claude-skills",
+  "name": "mattbobambrose-claude-skills",
   "description": "Community marketplace for Claude Code plugins — code quality, documentation, testing, and more",
   "owner": {
-    "name": "mambrose"
+    "name": "mattbobambrose"
   },
   "plugins": [
     {
@@ -33,7 +33,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/code-quality",
       "description": "Code review, bug finding, cleanup, naming checks, and secrets auditing",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -41,7 +41,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/documentation",
       "description": "Generate and maintain inline docs, API documentation, and READMEs",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "documentation"
     },
     {
@@ -49,7 +49,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/testing",
       "description": "Suggest new tests and raise test coverage",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "testing"
     },
     {
@@ -57,7 +57,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/project-tools",
       "description": "Suggest features, suggest skills, draft commits, and scaffold new skills",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "productivity"
     },
     {
@@ -65,7 +65,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/kotlin-tools",
       "description": "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -73,7 +73,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/hello-world",
       "description": "Generate a hello world program in any language",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -81,7 +81,7 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "source": "./plugins/summarize-day",
       "description": "Summarize accomplishments from git history with motivational messaging",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "productivity"
     }
   ]
@@ -118,7 +118,7 @@ Each plugin.json follows this minimal format (matching pambrose-plugins conventi
   "version": "1.0.0",
   "description": "<description>",
   "author": {
-    "name": "mambrose"
+    "name": "mattbobambrose"
   }
 }
 ```
@@ -284,10 +284,10 @@ git commit -m "feat: port kotlin-tools, hello-world, and summarize-day skills"
 
 Include:
 - Marketplace name and one-line description
-- Installation instructions (`/plugin marketplace add mambrose/mambrose-claude-skills`)
+- Installation instructions (`/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills`)
 - Plugin catalog table (name, description, skills, category)
 - Per-plugin sections with skill details
-- How to install individual plugins (`/plugin install code-quality@mambrose-claude-skills`)
+- How to install individual plugins (`/plugin install code-quality@mattbobambrose-claude-skills`)
 
 **Step 2: Commit**
 

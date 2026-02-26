@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Git-based Claude Code marketplace repository. Users add it with `/plugin marketplace add mambrose/mambrose-claude-skills` and install plugins via the standard `/plugin` interface.
+A Git-based Claude Code marketplace repository. Users add it with `/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills` and install plugins via the standard `/plugin` interface.
 
 ## Content
 
@@ -21,7 +21,7 @@ A Git-based Claude Code marketplace repository. Users add it with `/plugin marke
 ## Repository Structure
 
 ```
-mambrose-claude-skills/
+mattbobambrose-claude-skills/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── plugins/

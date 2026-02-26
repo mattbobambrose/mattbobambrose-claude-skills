@@ -1,11 +1,11 @@
-# Contributing to mambrose-claude-skills
+# Contributing to mattbobambrose-claude-skills
 
 Thank you for your interest in contributing plugins and skills to this marketplace. This guide covers how to create new plugins, add skills, and submit your changes.
 
 ## Repository Structure
 
 ```
-mambrose-claude-skills/
+mattbobambrose-claude-skills/
 ├── .claude-plugin/
 │   └── marketplace.json          # Root marketplace catalog
 ├── plugins/

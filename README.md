@@ -1,4 +1,4 @@
-# mambrose-claude-skills
+# mattbobambrose-claude-skills
 
 Community marketplace for Claude Code plugins — code quality, documentation, testing, and more.
 
@@ -7,13 +7,13 @@ Community marketplace for Claude Code plugins — code quality, documentation, t
 Add this marketplace to your Claude Code installation:
 
 ```
-/plugin marketplace add mambrose/mambrose-claude-skills
+/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills
 ```
 
 To install an individual plugin:
 
 ```
-/plugin install code-quality@mambrose-claude-skills
+/plugin install code-quality@mattbobambrose-claude-skills
 ```
 
 ## Updating Plugins
@@ -21,13 +21,13 @@ To install an individual plugin:
 Update all plugins from this marketplace:
 
 ```
-/plugin marketplace update mambrose-claude-skills
+/plugin marketplace update mattbobambrose-claude-skills
 ```
 
 Update a single plugin:
 
 ```
-/plugin update code-quality@mambrose-claude-skills
+/plugin update code-quality@mattbobambrose-claude-skills
 ```
 
 ## Plugin Catalog
@@ -49,7 +49,7 @@ Update a single plugin:
 Code review, bug finding, cleanup, naming checks, and secrets auditing.
 
 ```
-/plugin install code-quality@mambrose-claude-skills
+/plugin install code-quality@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -65,7 +65,7 @@ Code review, bug finding, cleanup, naming checks, and secrets auditing.
 Generate and maintain inline docs, API documentation, and READMEs.
 
 ```
-/plugin install documentation@mambrose-claude-skills
+/plugin install documentation@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -79,7 +79,7 @@ Generate and maintain inline docs, API documentation, and READMEs.
 Suggest new tests and raise test coverage.
 
 ```
-/plugin install testing@mambrose-claude-skills
+/plugin install testing@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -92,7 +92,7 @@ Suggest new tests and raise test coverage.
 Suggest features, suggest skills, draft commits, and scaffold new skills.
 
 ```
-/plugin install project-tools@mambrose-claude-skills
+/plugin install project-tools@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -107,7 +107,7 @@ Suggest features, suggest skills, draft commits, and scaffold new skills.
 Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies.
 
 ```
-/plugin install kotlin-tools@mambrose-claude-skills
+/plugin install kotlin-tools@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -120,7 +120,7 @@ Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies.
 Generate a hello world program in any language.
 
 ```
-/plugin install hello-world@mambrose-claude-skills
+/plugin install hello-world@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
@@ -132,7 +132,7 @@ Generate a hello world program in any language.
 Summarize accomplishments from git history with motivational messaging.
 
 ```
-/plugin install summarize-day@mambrose-claude-skills
+/plugin install summarize-day@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |

@@ -1,9 +1,9 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "mambrose-claude-skills",
+  "name": "mattbobambrose-claude-skills",
   "description": "Community marketplace for Claude Code plugins — code quality, documentation, testing, and more",
   "owner": {
-    "name": "mambrose"
+    "name": "mattbobambrose"
   },
   "plugins": [
     {
@@ -11,7 +11,7 @@
       "source": "./plugins/code-quality",
       "description": "Code review, bug finding, cleanup, naming checks, and secrets auditing",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -19,7 +19,7 @@
       "source": "./plugins/documentation",
       "description": "Generate and maintain inline docs, API documentation, and READMEs",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "documentation"
     },
     {
@@ -27,7 +27,7 @@
       "source": "./plugins/testing",
       "description": "Suggest new tests and raise test coverage",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "testing"
     },
     {
@@ -35,7 +35,7 @@
       "source": "./plugins/project-tools",
       "description": "Suggest features, suggest skills, draft commits, and scaffold new skills",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "productivity"
     },
     {
@@ -43,7 +43,7 @@
       "source": "./plugins/kotlin-tools",
       "description": "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -51,7 +51,7 @@
       "source": "./plugins/hello-world",
       "description": "Generate a hello world program in any language",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "development"
     },
     {
@@ -59,7 +59,7 @@
       "source": "./plugins/summarize-day",
       "description": "Summarize accomplishments from git history with motivational messaging",
       "version": "1.0.0",
-      "author": { "name": "mambrose" },
+      "author": { "name": "mattbobambrose" },
       "category": "productivity"
     }
   ]
