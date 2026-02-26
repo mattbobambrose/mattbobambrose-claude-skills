@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Code review, bug finding, cleanup, naming checks, and secrets auditing",
+  "author": {
+    "name": "mambrose"
+  }
+}
