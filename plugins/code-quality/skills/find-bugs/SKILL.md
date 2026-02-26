@@ -15,37 +15,41 @@ Review the entire codebase for bugs and write a summary to `bugs-summary.md` in 
 
 ## Steps
 
-1. **Discover source files**: Glob `**/src/main/kotlin/**/*.kt` across all subprojects to find all production code.
+1. **Detect the project stack**: Read build/manifest files (e.g., `package.json`, `build.gradle.kts`, `Cargo.toml`,
+   `go.mod`, `pyproject.toml`, `pom.xml`) to identify the language, framework, and build tool.
 
-2. **Discover test files**: Glob `**/src/test/kotlin/**/*.kt` across all subprojects to find all test files.
+2. **Discover source files**: Glob for production source files using patterns appropriate to the detected stack (e.g.,
+   `src/**/*.ts`, `**/src/main/**/*.kt`, `**/*.go`, `src/**/*.py`).
 
-3. **Read build configuration**: Read `build.gradle.kts`, `settings.gradle.kts`, `gradle/libs.versions.toml`, and each
-   subproject's `build.gradle.kts` to understand dependencies and build setup.
+3. **Discover test files**: Glob for test files using the project's test directory conventions.
 
-4. **Read every source file** to understand the full codebase before looking for issues.
+4. **Read build configuration** to understand dependencies, plugins, and build setup.
 
-5. **Read every test file** to understand what is already tested and whether tests are correct.
+5. **Read every source file** to understand the full codebase before looking for issues.
 
-6. **Run the test suite**: Execute `./gradlew test` to check for failing tests.
+6. **Read every test file** to understand what is already tested and whether tests are correct.
 
-7. **Identify bugs** by looking for:
+7. **Run the test suite** using the project's test command (e.g., `npm test`, `./gradlew test`, `cargo test`,
+   `go test ./...`, `pytest`) to check for failing tests.
+
+8. **Identify bugs** by looking for:
     - Logic errors (incorrect conditionals, off-by-one, wrong operator)
     - Missing input validation or error handling
     - Mismatched test names vs assertions
     - Visibility issues (public API surface leaking internals)
     - Resource leaks (unclosed clients, streams, connections)
     - Thread safety issues
-    - Serialization/deserialization mismatches between DTOs and sample JSON
+    - Serialization/deserialization mismatches
     - Silent failures (operations that fail without warning)
-    - Incorrect or missing null handling
+    - Incorrect or missing null/error handling
     - Duplicated code that has diverged (copy-paste bugs)
 
-8. **Check for design issues** worth noting:
+9. **Check for design issues** worth noting:
     - Hardcoded values that should be configurable
-    - Data class equality semantics that may surprise callers
+    - Equality/comparison semantics that may surprise callers
     - Missing API contracts or invariants
 
-9. **Write `bugs-summary.md`**: Create or overwrite `bugs-summary.md` in the project root with the following structure:
+10. **Write `bugs-summary.md`**: Create or overwrite `bugs-summary.md` in the project root with the following structure:
 
     ```markdown
     # Bug Summary
@@ -54,7 +58,7 @@ Review the entire codebase for bugs and write a summary to `bugs-summary.md` in 
 
     ### 1. Short title
 
-    **File:** `path/to/file.kt`
+    **File:** `path/to/file.ext`
 
     Description of the bug, why it's a problem, and what the expected behavior should be.
 
@@ -74,7 +78,7 @@ Review the entire codebase for bugs and write a summary to `bugs-summary.md` in 
     - If a previous `bugs-summary.md` exists, read it first and preserve any items marked as "FIXED" in a
       **Fixed** section at the top
 
-10. **Report**: Summarize how many bugs were found and give a brief overview of the findings.
+11. **Report**: Summarize how many bugs were found and give a brief overview of the findings.
 
 ## Important
 

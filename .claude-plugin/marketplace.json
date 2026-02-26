@@ -10,7 +10,7 @@
       "name": "code-quality",
       "source": "./plugins/code-quality",
       "description": "Code review, bug finding, cleanup, naming checks, and secrets auditing",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": { "name": "mattbobambrose" },
       "category": "development"
     },
@@ -26,7 +26,7 @@
       "name": "testing",
       "source": "./plugins/testing",
       "description": "Suggest new tests and add tests to raise coverage",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": { "name": "mattbobambrose" },
       "category": "testing"
     },

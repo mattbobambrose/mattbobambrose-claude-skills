@@ -40,18 +40,17 @@ If `$ARGUMENTS` is empty, ask the user which bugs to fix.
    b. **Read existing test files** for the affected code to understand the current test coverage and patterns.
 
    c. **Implement the fix**: Make the minimum change needed to resolve the bug. Follow project conventions:
-   - 2-space indentation for Kotlin, 4-space for `build.gradle.kts`
-   - Max 120 character line length
-   - Match existing code style and patterns
+   - Match the existing code style (indentation, line length, naming patterns)
+   - Do not introduce new patterns or styles that differ from surrounding code
 
    d. **Add or update tests** to verify the fix:
-   - Add tests to existing test files when they cover the same class
+   - Add tests to existing test files when they cover the same class or module
    - Create new test files only when no existing test file covers the affected code
-   - Follow project test conventions: Kotest `AnnotationSpec`, `@Test`, backtick-enclosed descriptive names
+   - Follow the project's existing test conventions (framework, naming style, directory layout)
    - Each fix should have at least one test that would have failed before the fix and passes after
 
-   e. **Run the test suite**: Execute `./gradlew test` to confirm the fix doesn't break anything and the new tests pass.
-   If tests fail, investigate and fix the issue before moving on.
+   e. **Run the test suite** using the project's test command to confirm the fix doesn't break anything and the new
+   tests pass. If tests fail, investigate and fix the issue before moving on.
 
 4. **Update `bugs-summary.md`**: Rewrite the file with the following structure:
 
@@ -62,7 +61,7 @@ If `$ARGUMENTS` is empty, ask the user which bugs to fix.
 
     ### N. Short title (FIXED)
 
-    **File:** `path/to/file.kt`
+    **File:** `path/to/file.ext`
 
     Original description of the bug.
 
@@ -84,7 +83,7 @@ If `$ARGUMENTS` is empty, ask the user which bugs to fix.
     - Keep bug numbers stable (do not renumber)
     - Preserve unfixed bugs and design observations exactly as they were
 
-5. **Run tests one final time**: Execute `./gradlew test` to confirm everything is green.
+5. **Run tests one final time** to confirm everything is green.
 
 6. **Report**: Summarize what was fixed, what tests were added, and confirm all tests pass.
 

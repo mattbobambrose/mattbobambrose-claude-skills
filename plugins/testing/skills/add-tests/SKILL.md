@@ -16,43 +16,38 @@ Analyze the codebase for test coverage gaps and write new tests to fill them.
 
 ## Steps
 
-1. **Discover source files**: Glob `**/src/main/kotlin/**/*.kt` across all subprojects to find all production code.
+1. **Detect the project stack**: Read build/manifest files to identify the language, test framework, and directory
+   conventions.
 
-2. **Discover existing tests**: Glob `**/src/test/kotlin/**/*.kt` across all subprojects to find all test files.
+2. **Discover source files**: Glob for production source files using patterns appropriate to the detected stack.
 
-3. **Read every source and test file** to build a complete picture of what is and isn't covered.
+3. **Discover existing tests**: Glob for test files using the project's test directory conventions.
 
-4. **Identify coverage gaps** by checking each source file for:
+4. **Read every source and test file** to build a complete picture of what is and isn't covered.
+
+5. **Identify coverage gaps** by checking each source file for:
     - Public functions/methods with no corresponding test
-    - Edge cases not covered (empty inputs, boundary values, nullability, error conditions)
-    - Serialization round-trip tests missing for `@Serializable` data classes
-    - DTOs without deserialization tests against sample JSON in `docs/`
-    - Builder/DSL classes without tests for observation accumulation, correct model names, or correct observation names
-    - Domain method classes where individual methods lack dedicated unit tests
+    - Edge cases not covered (empty inputs, boundary values, null/error conditions)
+    - Serialization round-trip tests missing for data transfer objects
+    - Classes or modules where individual methods lack dedicated unit tests
 
-5. **Write the tests**:
-    - Place tests in the same subproject as the source file being tested (e.g., source in
-      `json-bayesian-dsl/src/main/kotlin/` gets tests in `json-bayesian-dsl/src/test/kotlin/`)
-    - Add tests to existing test files when they cover the same class; create new test files only for classes with no
-      existing test file
-    - Follow project conventions exactly:
-        - Kotest `AnnotationSpec` with `@Test` annotation
-        - Backtick-enclosed descriptive method names (e.g., `` `age should set correct observation name` ``)
-        - 2-space indentation
-        - Import `io.kotest.core.spec.style.AnnotationSpec`, `io.kotest.matchers.shouldBe`, and other matchers as needed
-    - Use the same test patterns found in existing test files (e.g., `TestBuilder` inner classes for domain method
-      tests)
+6. **Write the tests**:
+    - Place tests alongside existing tests following the project's directory layout
+    - Add tests to existing test files when they cover the same class or module; create new test files only when no
+      existing test file covers the affected code
+    - Follow the project's existing test conventions exactly — match the test framework, naming style, assertion
+      library, indentation, and file organization found in existing tests
+    - Use the same test patterns and helpers found in existing test files
 
-6. **Build and verify**: Run `./gradlew clean build` to confirm all new tests compile and pass.
+7. **Build and verify**: Run the project's test command to confirm all new tests compile and pass.
 
-7. **Report**: List every test added, grouped by file, with a one-line description of what each test verifies.
+8. **Report**: List every test added, grouped by file, with a one-line description of what each test verifies.
 
 ## Important
 
 - Prioritize tests that catch real bugs (edge cases, boundary conditions, incorrect wiring) over trivial duplication of
   existing happy-path tests.
 - Never duplicate a test that already exists — read existing tests carefully first.
-- If a domain method class (e.g., `InitialModelDomainMethods`) has no dedicated test file, create one following the
-  pattern in `ProductFeedbackModelDomainMethodsTest.kt` or `CompilerModelDomainMethodsTest.kt`.
+- If a class has no dedicated test file, create one following the patterns in existing test files.
 - Keep each test focused on a single behavior.
-- Use values from `docs/bayesian-json/` sample JSON files when realistic test data is needed.
+- Use realistic test data drawn from the project's own fixtures, samples, or documentation when available.
