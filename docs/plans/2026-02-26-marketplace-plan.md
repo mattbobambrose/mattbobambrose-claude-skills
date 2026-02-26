@@ -146,14 +146,14 @@ git commit -m "feat: add plugin.json for all 7 plugins"
 **Files:**
 - Copy: `~/git/claude-skills/find-bugs/SKILL.md` → `plugins/code-quality/skills/find-bugs/SKILL.md`
 - Copy: `~/git/claude-skills/fix-bugs/SKILL.md` → `plugins/code-quality/skills/fix-bugs/SKILL.md`
-- Copy: `~/git/claude-skills/clean-up/SKILL.md` → `plugins/code-quality/skills/clean-up/SKILL.md`
+- Copy: `~/git/claude-skills/cleanup/SKILL.md` → `plugins/code-quality/skills/cleanup/SKILL.md`
 - Copy: `~/git/claude-skills/check-naming/SKILL.md` → `plugins/code-quality/skills/check-naming/SKILL.md`
 - Copy: `~/git/claude-skills/check-secrets/SKILL.md` → `plugins/code-quality/skills/check-secrets/SKILL.md`
 
 **Step 1: Copy all 5 SKILL.md files**
 
 ```bash
-for skill in find-bugs fix-bugs clean-up check-naming check-secrets; do
+for skill in find-bugs fix-bugs cleanup check-naming check-secrets; do
   mkdir -p plugins/code-quality/skills/$skill
   cp ~/git/claude-skills/$skill/SKILL.md plugins/code-quality/skills/$skill/SKILL.md
 done
@@ -163,7 +163,7 @@ done
 
 ```bash
 git add plugins/code-quality/skills/
-git commit -m "feat: port code-quality skills (find-bugs, fix-bugs, clean-up, check-naming, check-secrets)"
+git commit -m "feat: port code-quality skills (find-bugs, fix-bugs, cleanup, check-naming, check-secrets)"
 ```
 
 ---
@@ -197,12 +197,12 @@ git commit -m "feat: port documentation skills (add-docs, update-docs, update-re
 
 **Files:**
 - Copy: `~/git/claude-skills/suggest-tests/SKILL.md` → `plugins/testing/skills/suggest-tests/SKILL.md`
-- Copy: `~/git/claude-skills/raise-coverage/SKILL.md` → `plugins/testing/skills/raise-coverage/SKILL.md`
+- Copy: `~/git/claude-skills/add-tests/SKILL.md` → `plugins/testing/skills/add-tests/SKILL.md`
 
 **Step 1: Copy both SKILL.md files**
 
 ```bash
-for skill in suggest-tests raise-coverage; do
+for skill in suggest-tests add-tests; do
   mkdir -p plugins/testing/skills/$skill
   cp ~/git/claude-skills/$skill/SKILL.md plugins/testing/skills/$skill/SKILL.md
 done
@@ -212,7 +212,7 @@ done
 
 ```bash
 git add plugins/testing/skills/
-git commit -m "feat: port testing skills (suggest-tests, raise-coverage)"
+git commit -m "feat: port testing skills (suggest-tests, add-tests)"
 ```
 
 ---
@@ -221,14 +221,14 @@ git commit -m "feat: port testing skills (suggest-tests, raise-coverage)"
 
 **Files:**
 - Copy: `~/git/claude-skills/suggest-features/SKILL.md` → `plugins/project-tools/skills/suggest-features/SKILL.md`
-- Copy: `~/git/claude-skills/suggest-skills/SKILL.md` → `plugins/project-tools/skills/suggest-skills/SKILL.md`
-- Copy: `~/git/claude-skills/suggest-commit/SKILL.md` → `plugins/project-tools/skills/suggest-commit/SKILL.md`
+- Copy: `~/git/claude-skills/suggest-plugins/SKILL.md` → `plugins/project-tools/skills/suggest-plugins/SKILL.md`
+- Copy: `~/git/claude-skills/draft-commit/SKILL.md` → `plugins/project-tools/skills/draft-commit/SKILL.md`
 - Copy: `~/git/claude-skills/create-skill/SKILL.md` → `plugins/project-tools/skills/create-skill/SKILL.md`
 
 **Step 1: Copy all 4 SKILL.md files**
 
 ```bash
-for skill in suggest-features suggest-skills suggest-commit create-skill; do
+for skill in suggest-features suggest-plugins draft-commit create-skill; do
   mkdir -p plugins/project-tools/skills/$skill
   cp ~/git/claude-skills/$skill/SKILL.md plugins/project-tools/skills/$skill/SKILL.md
 done
@@ -238,7 +238,7 @@ done
 
 ```bash
 git add plugins/project-tools/skills/
-git commit -m "feat: port project-tools skills (suggest-features, suggest-skills, suggest-commit, create-skill)"
+git commit -m "feat: port project-tools skills (suggest-features, suggest-plugins, draft-commit, create-skill)"
 ```
 
 ---

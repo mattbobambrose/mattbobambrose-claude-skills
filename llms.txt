@@ -6,10 +6,10 @@ This is a Claude Code plugin marketplace. Plugins are installed via the Claude C
 
 ## Plugins
 
-- [code-quality](plugins/code-quality/.claude-plugin/plugin.json): Code review, bug finding, cleanup, naming checks, and secrets auditing (5 skills: find-bugs, fix-bugs, clean-up, check-naming, check-secrets)
+- [code-quality](plugins/code-quality/.claude-plugin/plugin.json): Code review, bug finding, cleanup, naming checks, and secrets auditing (5 skills: find-bugs, fix-bugs, cleanup, check-naming, check-secrets)
 - [documentation](plugins/documentation/.claude-plugin/plugin.json): Generate and maintain inline docs, API documentation, and READMEs (3 skills: add-docs, update-docs, update-readme)
-- [testing](plugins/testing/.claude-plugin/plugin.json): Suggest new tests and raise test coverage (2 skills: suggest-tests, raise-coverage)
-- [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest skills, draft commits, and scaffold new skills (4 skills: suggest-features, suggest-skills, suggest-commit, create-skill)
+- [testing](plugins/testing/.claude-plugin/plugin.json): Suggest new tests and add tests to raise coverage (2 skills: suggest-tests, add-tests)
+- [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest plugins, draft commits, and scaffold new skills (4 skills: suggest-features, suggest-plugins, draft-commit, create-skill)
 - [kotlin-tools](plugins/kotlin-tools/.claude-plugin/plugin.json): Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies (2 skills: add-dto, add-dependency)
 - [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 skill)
 - [summarize-progress](plugins/summarize-progress/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill)

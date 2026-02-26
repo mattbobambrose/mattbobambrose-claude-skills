@@ -10,7 +10,7 @@
       "name": "code-quality",
       "source": "./plugins/code-quality",
       "description": "Code review, bug finding, cleanup, naming checks, and secrets auditing",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": { "name": "mattbobambrose" },
       "category": "development"
     },
@@ -25,16 +25,16 @@
     {
       "name": "testing",
       "source": "./plugins/testing",
-      "description": "Suggest new tests and raise test coverage",
-      "version": "1.0.0",
+      "description": "Suggest new tests and add tests to raise coverage",
+      "version": "1.1.0",
       "author": { "name": "mattbobambrose" },
       "category": "testing"
     },
     {
       "name": "project-tools",
       "source": "./plugins/project-tools",
-      "description": "Suggest features, suggest skills, draft commits, and scaffold new skills",
-      "version": "1.0.0",
+      "description": "Suggest features, suggest plugins, draft commits, and scaffold new skills",
+      "version": "1.1.0",
       "author": { "name": "mattbobambrose" },
       "category": "productivity"
     },

@@ -36,8 +36,8 @@ Update a single plugin:
 |--------|-------------|--------|----------|
 | `code-quality` | Code review, bug finding, cleanup, naming checks, and secrets auditing | 5 | development |
 | `documentation` | Generate and maintain inline docs, API documentation, and READMEs | 3 | documentation |
-| `testing` | Suggest new tests and raise test coverage | 2 | testing |
-| `project-tools` | Suggest features, suggest skills, draft commits, and scaffold new skills | 4 | productivity |
+| `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
+| `project-tools` | Suggest features, suggest plugins, draft commits, and scaffold new skills | 4 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 | development |
 | `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
@@ -56,7 +56,7 @@ Code review, bug finding, cleanup, naming checks, and secrets auditing.
 |-------|-------------|
 | `/find-bugs` | Review the codebase for bugs and write findings to bugs-summary.md |
 | `/fix-bugs <bug-numbers>` | Fix specified bugs from bugs-summary.md and add tests to verify fixes |
-| `/clean-up` | Scan the codebase for cleanup opportunities and apply safe fixes |
+| `/cleanup` | Scan the codebase for cleanup opportunities and apply safe fixes |
 | `/check-naming [file\|package\|project]` | Check variable names in project source files for appropriateness and suggest improvements |
 | `/check-secrets` | Check git history and working tree for committed secrets files or .env files, and ensure they are covered by .gitignore |
 
@@ -76,7 +76,7 @@ Generate and maintain inline docs, API documentation, and READMEs.
 
 ### testing
 
-Suggest new tests and raise test coverage.
+Suggest new tests and add tests to raise coverage.
 
 ```
 /plugin install testing@mattbobambrose-claude-skills
@@ -85,11 +85,11 @@ Suggest new tests and raise test coverage.
 | Skill | Description |
 |-------|-------------|
 | `/suggest-tests` | Suggest new tests to write based on existing source code and test coverage |
-| `/raise-coverage` | Add additional tests to raise test coverage |
+| `/add-tests` | Add additional tests to raise test coverage |
 
 ### project-tools
 
-Suggest features, suggest skills, draft commits, and scaffold new skills.
+Suggest features, suggest plugins, draft commits, and scaffold new skills.
 
 ```
 /plugin install project-tools@mattbobambrose-claude-skills
@@ -98,8 +98,8 @@ Suggest features, suggest skills, draft commits, and scaffold new skills.
 | Skill | Description |
 |-------|-------------|
 | `/suggest-features` | Analyze the project and existing functionality to suggest new features worth adding |
-| `/suggest-skills` | Analyze the project and existing skills to suggest new skills worth adding |
-| `/suggest-commit [file-path]` | Suggest a commit message, show changed files, and optionally commit |
+| `/suggest-plugins` | Analyze the project and existing plugins to suggest new plugins worth adding |
+| `/draft-commit [file-path]` | Draft a commit message, show changed files, and optionally commit |
 | `/create-skill <skill-name> [description]` | Scaffold a new skill with correct frontmatter and structure, and add it to the README |
 
 ### kotlin-tools

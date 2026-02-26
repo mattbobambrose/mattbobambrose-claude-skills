@@ -1,5 +1,5 @@
 ---
-name: clean-up
+name: cleanup
 description: Scan the codebase for cleanup opportunities and apply safe fixes
 allowed-tools:
 

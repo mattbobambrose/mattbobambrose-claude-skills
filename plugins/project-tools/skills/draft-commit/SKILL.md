@@ -1,6 +1,6 @@
 ---
-name: suggest-commit
-description: Suggest a commit message, show changed files, and optionally commit
+name: draft-commit
+description: Draft a commit message, show changed files, and optionally commit
 argument-hint: "[file-path]"
 allowed-tools:
 

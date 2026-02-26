@@ -1,5 +1,5 @@
 ---
-name: raise-coverage
+name: add-tests
 description: Add additional tests to raise test coverage
 allowed-tools:
 

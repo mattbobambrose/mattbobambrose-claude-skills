@@ -1,6 +1,6 @@
 ---
-name: suggest-skills
-description: Analyze the project and existing skills to suggest new skills worth adding
+name: suggest-plugins
+description: Analyze the project and existing plugins to suggest new plugins worth adding
 allowed-tools:
 
 - Read

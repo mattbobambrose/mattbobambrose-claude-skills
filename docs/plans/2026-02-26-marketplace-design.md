@@ -10,10 +10,10 @@ A Git-based Claude Code marketplace repository. Users add it with `/plugin marke
 
 | Plugin | Skills | Description |
 |--------|--------|-------------|
-| code-quality | find-bugs, fix-bugs, clean-up, check-naming, check-secrets | Code review, bug finding, and cleanup tools |
+| code-quality | find-bugs, fix-bugs, cleanup, check-naming, check-secrets | Code review, bug finding, and cleanup tools |
 | documentation | add-docs, update-docs, update-readme | Documentation generation and maintenance |
-| testing | suggest-tests, raise-coverage | Test discovery and coverage improvement |
-| project-tools | suggest-features, suggest-skills, suggest-commit, create-skill | Project development and skill authoring |
+| testing | suggest-tests, add-tests | Test discovery and coverage improvement |
+| project-tools | suggest-features, suggest-plugins, draft-commit, create-skill | Project development and skill authoring |
 | kotlin-tools | add-dto, add-dependency | Kotlin/Gradle-specific utilities |
 | hello-world | hello-world | Simple hello world generator |
 | summarize-progress | summarize-progress | Git history summarization |
@@ -27,16 +27,16 @@ mattbobambrose-claude-skills/
 ├── plugins/
 │   ├── code-quality/
 │   │   ├── .claude-plugin/plugin.json
-│   │   └── skills/{find-bugs,fix-bugs,clean-up,check-naming,check-secrets}/SKILL.md
+│   │   └── skills/{find-bugs,fix-bugs,cleanup,check-naming,check-secrets}/SKILL.md
 │   ├── documentation/
 │   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/{add-docs,update-docs,update-readme}/SKILL.md
 │   ├── testing/
 │   │   ├── .claude-plugin/plugin.json
-│   │   └── skills/{suggest-tests,raise-coverage}/SKILL.md
+│   │   └── skills/{suggest-tests,add-tests}/SKILL.md
 │   ├── project-tools/
 │   │   ├── .claude-plugin/plugin.json
-│   │   └── skills/{suggest-features,suggest-skills,suggest-commit,create-skill}/SKILL.md
+│   │   └── skills/{suggest-features,suggest-plugins,draft-commit,create-skill}/SKILL.md
 │   ├── kotlin-tools/
 │   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/{add-dto,add-dependency}/SKILL.md
