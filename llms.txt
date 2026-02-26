@@ -1,0 +1,26 @@
+# mambrose-claude-skills
+
+> A community Claude Code marketplace repository containing plugins for code quality, documentation, testing, project tooling, and Kotlin development. Install with `/plugin marketplace add mambrose/mambrose-claude-skills`.
+
+This is a Claude Code plugin marketplace. Plugins are installed via the Claude Code `/plugin` interface. Each plugin bundles related skills (SKILL.md files) that teach Claude Code how to perform specific tasks. The marketplace catalog is defined in `.claude-plugin/marketplace.json`.
+
+## Plugins
+
+- [code-quality](plugins/code-quality/.claude-plugin/plugin.json): Code review, bug finding, cleanup, naming checks, and secrets auditing (5 skills: find-bugs, fix-bugs, clean-up, check-naming, check-secrets)
+- [documentation](plugins/documentation/.claude-plugin/plugin.json): Generate and maintain inline docs, API documentation, and READMEs (3 skills: add-docs, update-docs, update-readme)
+- [testing](plugins/testing/.claude-plugin/plugin.json): Suggest new tests and raise test coverage (2 skills: suggest-tests, raise-coverage)
+- [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest skills, draft commits, and scaffold new skills (4 skills: suggest-features, suggest-skills, suggest-commit, create-skill)
+- [kotlin-tools](plugins/kotlin-tools/.claude-plugin/plugin.json): Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies (2 skills: add-dto, add-dependency)
+- [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 skill)
+- [summarize-day](plugins/summarize-day/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill)
+
+## Documentation
+
+- [README](README.md): Full plugin catalog with installation instructions and per-plugin skill listings
+- [Contributing Guide](CONTRIBUTING.md): How to create plugins, add skills, SKILL.md format, and PR checklist
+- [Marketplace Catalog](.claude-plugin/marketplace.json): Machine-readable plugin registry
+
+## Optional
+
+- [Design Document](docs/plans/2026-02-26-marketplace-design.md): Original design decisions for the marketplace
+- [Implementation Plan](docs/plans/2026-02-26-marketplace-plan.md): Step-by-step build plan used to create the marketplace
