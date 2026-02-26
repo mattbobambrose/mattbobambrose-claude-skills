@@ -40,7 +40,7 @@ Update a single plugin:
 | `project-tools` | Suggest features, suggest skills, draft commits, and scaffold new skills | 4 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 | development |
-| `summarize-day` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
+| `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
 
 ## Plugins
 
@@ -127,17 +127,17 @@ Generate a hello world program in any language.
 |-------|-------------|
 | `/hello-world [language]` | Generate a hello world program in a specified programming language |
 
-### summarize-day
+### summarize-progress
 
 Summarize accomplishments from git history with motivational messaging.
 
 ```
-/plugin install summarize-day@mattbobambrose-claude-skills
+/plugin install summarize-progress@mattbobambrose-claude-skills
 ```
 
 | Skill | Description |
 |-------|-------------|
-| `/summarize-day [today \| yesterday \| last week \| last month \| date]` | Summarize what the user accomplished over a time period based on git history and provide motivational messaging |
+| `/summarize-progress [today \| yesterday \| last week \| last month \| date]` | Summarize what the user accomplished over a time period based on git history and provide motivational messaging |
 
 ## Contributing
 

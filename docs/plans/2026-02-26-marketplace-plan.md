@@ -77,8 +77,8 @@ Create `.claude-plugin/marketplace.json` with all 7 plugins listed. Use the sche
       "category": "development"
     },
     {
-      "name": "summarize-day",
-      "source": "./plugins/summarize-day",
+      "name": "summarize-progress",
+      "source": "./plugins/summarize-progress",
       "description": "Summarize accomplishments from git history with motivational messaging",
       "version": "1.0.0",
       "author": { "name": "mattbobambrose" },
@@ -106,7 +106,7 @@ git commit -m "feat: add marketplace.json with 7 plugin entries"
 - Create: `plugins/project-tools/.claude-plugin/plugin.json`
 - Create: `plugins/kotlin-tools/.claude-plugin/plugin.json`
 - Create: `plugins/hello-world/.claude-plugin/plugin.json`
-- Create: `plugins/summarize-day/.claude-plugin/plugin.json`
+- Create: `plugins/summarize-progress/.claude-plugin/plugin.json`
 
 **Step 1: Create all 7 plugin.json files**
 
@@ -130,7 +130,7 @@ Use these descriptions:
 - project-tools: "Suggest features, suggest skills, draft commits, and scaffold new skills"
 - kotlin-tools: "Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies"
 - hello-world: "Generate a hello world program in any language"
-- summarize-day: "Summarize accomplishments from git history with motivational messaging"
+- summarize-progress: "Summarize accomplishments from git history with motivational messaging"
 
 **Step 2: Commit**
 
@@ -243,13 +243,13 @@ git commit -m "feat: port project-tools skills (suggest-features, suggest-skills
 
 ---
 
-### Task 7: Port skills — kotlin-tools, hello-world, summarize-day
+### Task 7: Port skills — kotlin-tools, hello-world, summarize-progress
 
 **Files:**
 - Copy: `~/git/claude-skills/add-dto/SKILL.md` → `plugins/kotlin-tools/skills/add-dto/SKILL.md`
 - Copy: `~/git/claude-skills/add-dependency/SKILL.md` → `plugins/kotlin-tools/skills/add-dependency/SKILL.md`
 - Copy: `~/git/claude-skills/hello-world/SKILL.md` → `plugins/hello-world/skills/hello-world/SKILL.md`
-- Copy: `~/git/claude-skills/summarize-day/SKILL.md` → `plugins/summarize-day/skills/summarize-day/SKILL.md`
+- Copy: `~/git/claude-skills/summarize-progress/SKILL.md` → `plugins/summarize-progress/skills/summarize-progress/SKILL.md`
 
 **Step 1: Copy all 4 SKILL.md files**
 
@@ -262,15 +262,15 @@ done
 mkdir -p plugins/hello-world/skills/hello-world
 cp ~/git/claude-skills/hello-world/SKILL.md plugins/hello-world/skills/hello-world/SKILL.md
 
-mkdir -p plugins/summarize-day/skills/summarize-day
-cp ~/git/claude-skills/summarize-day/SKILL.md plugins/summarize-day/skills/summarize-day/SKILL.md
+mkdir -p plugins/summarize-progress/skills/summarize-progress
+cp ~/git/claude-skills/summarize-progress/SKILL.md plugins/summarize-progress/skills/summarize-progress/SKILL.md
 ```
 
 **Step 2: Commit**
 
 ```bash
-git add plugins/kotlin-tools/ plugins/hello-world/ plugins/summarize-day/
-git commit -m "feat: port kotlin-tools, hello-world, and summarize-day skills"
+git add plugins/kotlin-tools/ plugins/hello-world/ plugins/summarize-progress/
+git commit -m "feat: port kotlin-tools, hello-world, and summarize-progress skills"
 ```
 
 ---

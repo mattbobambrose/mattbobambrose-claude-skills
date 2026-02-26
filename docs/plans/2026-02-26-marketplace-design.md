@@ -16,7 +16,7 @@ A Git-based Claude Code marketplace repository. Users add it with `/plugin marke
 | project-tools | suggest-features, suggest-skills, suggest-commit, create-skill | Project development and skill authoring |
 | kotlin-tools | add-dto, add-dependency | Kotlin/Gradle-specific utilities |
 | hello-world | hello-world | Simple hello world generator |
-| summarize-day | summarize-day | Git history summarization |
+| summarize-progress | summarize-progress | Git history summarization |
 
 ## Repository Structure
 
@@ -43,9 +43,9 @@ mattbobambrose-claude-skills/
 │   ├── hello-world/
 │   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/hello-world/SKILL.md
-│   └── summarize-day/
+│   └── summarize-progress/
 │       ├── .claude-plugin/plugin.json
-│       └── skills/summarize-day/SKILL.md
+│       └── skills/summarize-progress/SKILL.md
 ├── CONTRIBUTING.md
 ├── README.md
 └── .gitignore

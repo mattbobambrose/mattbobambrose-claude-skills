@@ -12,7 +12,7 @@ This is a Claude Code plugin marketplace. Plugins are installed via the Claude C
 - [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest skills, draft commits, and scaffold new skills (4 skills: suggest-features, suggest-skills, suggest-commit, create-skill)
 - [kotlin-tools](plugins/kotlin-tools/.claude-plugin/plugin.json): Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies (2 skills: add-dto, add-dependency)
 - [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 skill)
-- [summarize-day](plugins/summarize-day/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill)
+- [summarize-progress](plugins/summarize-progress/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill)
 
 ## Documentation
 

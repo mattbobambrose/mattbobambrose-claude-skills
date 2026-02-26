@@ -1,5 +1,5 @@
 ---
-name: summarize-day
+name: summarize-progress
 description: Summarize what the user accomplished over a time period based on git history and provide motivational
 messaging
 argument-hint: "[today | yesterday | last week | last month | date]"
