@@ -37,7 +37,7 @@ Update a single plugin:
 | `code-quality` | Code review, bug finding, cleanup, naming checks, and secrets auditing | 5 | development |
 | `documentation` | Generate and maintain inline docs, API documentation, and READMEs | 3 | documentation |
 | `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
-| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types | 5 | productivity |
+| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types | 5 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 command | development |
 | `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
@@ -89,7 +89,7 @@ Suggest new tests and add tests to raise coverage.
 
 ### project-tools
 
-Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types.
+Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types.
 
 ```
 /plugin install project-tools@mattbobambrose-claude-skills
@@ -100,7 +100,7 @@ Suggest features, suggest plugins, draft commits, scaffold new skills, and audit
 | `/suggest-features` | Analyze the project and existing functionality to suggest new features worth adding |
 | `/suggest-plugins` | Analyze the project and existing plugins to suggest new plugins worth adding |
 | `/draft-commit [file-path]` | Draft a commit message, show changed files, and optionally commit |
-| `/create-skill <skill-name> [description]` | Scaffold a new skill with correct frontmatter and structure, and add it to the README |
+| `/create-skill <name> [description]` | Scaffold a new skill or command with correct structure, auto-determining the appropriate type |
 | `/audit-skill-type` | Analyze each skill in the marketplace and recommend whether it is better suited as a skill or command |
 
 ### kotlin-tools

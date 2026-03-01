@@ -1,3 +1,25 @@
+# Create-Skill Auto Type Detection — Implementation Plan
+
+> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+
+**Goal:** Modify the `create-skill` skill to auto-determine whether to scaffold a skill or command based on the audit-skill-type criteria, with user override.
+
+**Architecture:** Single-file rewrite of `SKILL.md` that adds a type-determination step between description gathering and scaffolding. The 5 audit criteria are inlined directly. Two scaffold templates (skill and command) replace the current single template.
+
+**Tech Stack:** Markdown skill definitions (no build system, no tests)
+
+---
+
+### Task 1: Rewrite create-skill SKILL.md
+
+**Files:**
+- Modify: `plugins/project-tools/skills/create-skill/SKILL.md` (entire file)
+
+**Step 1: Replace the SKILL.md with the updated version**
+
+Write this exact content to `plugins/project-tools/skills/create-skill/SKILL.md`:
+
+````markdown
 ---
 name: create-skill
 description: Scaffold a new skill or command with correct structure, auto-determining the appropriate type
@@ -53,7 +75,7 @@ If `$ARGUMENTS` is empty, ask the user for the name and description before proce
 
     **If skill** — create `<plugin>/skills/$0/SKILL.md` with this structure:
 
-    ~~~markdown
+    ```markdown
     ---
     name: <name>
     description: <description>
@@ -83,7 +105,7 @@ If `$ARGUMENTS` is empty, ask the user for the name and description before proce
 
     - Key constraint or safety rule.
     - Another constraint.
-    ~~~
+    ```
 
     - Set `name` to `$0` and `description` to the agreed description.
     - Set `argument-hint` only if the skill takes arguments; remove the field entirely if it takes none.
@@ -92,7 +114,7 @@ If `$ARGUMENTS` is empty, ask the user for the name and description before proce
 
     **If command** — create `<plugin>/commands/$0.md` with this structure:
 
-    ~~~markdown
+    ```markdown
     ---
     name: <name>
     description: <description>
@@ -107,7 +129,7 @@ If `$ARGUMENTS` is empty, ask the user for the name and description before proce
 
     - Bullet point describing key behavior.
     - Another bullet point.
-    ~~~
+    ```
 
     - Set `name` to `$0` and `description` to the agreed description.
     - Set `argument-hint` only if the command takes arguments; remove the field entirely if it takes none.
@@ -130,3 +152,108 @@ If `$ARGUMENTS` is empty, ask the user for the name and description before proce
 - If the skills/commands directory is somewhere other than the expected location, infer the correct path from where
   existing files are located.
 - The type determination is a recommendation, not a mandate — always let the user override.
+````
+
+**Step 2: Verify the file was written correctly**
+
+Run: `head -5 plugins/project-tools/skills/create-skill/SKILL.md`
+Expected: The YAML frontmatter opening with the new description containing "skill or command".
+
+---
+
+### Task 2: Bump version in plugin.json
+
+**Files:**
+- Modify: `plugins/project-tools/.claude-plugin/plugin.json`
+
+**Step 1: Update the version and description**
+
+Change version from `"1.2.0"` to `"1.2.1"` and update the description to reflect the new capability.
+
+```json
+{
+  "name": "project-tools",
+  "version": "1.2.1",
+  "description": "Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types",
+  "author": {
+    "name": "mattbobambrose"
+  }
+}
+```
+
+---
+
+### Task 3: Bump version in marketplace.json
+
+**Files:**
+- Modify: `.claude-plugin/marketplace.json`
+
+**Step 1: Update the project-tools entry**
+
+Find the `project-tools` entry and change:
+- `"version"` from `"1.2.0"` to `"1.2.1"`
+- `"description"` to `"Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types"`
+
+---
+
+### Task 4: Update README.md
+
+**Files:**
+- Modify: `README.md`
+
+**Step 1: Update the create-skill row in the project-tools table**
+
+Change the `/create-skill` row description from:
+```
+| `/create-skill <skill-name> [description]` | Scaffold a new skill with correct frontmatter and structure, and add it to the README |
+```
+to:
+```
+| `/create-skill <name> [description]` | Scaffold a new skill or command with correct structure, auto-determining the appropriate type |
+```
+
+**Step 2: Update the project-tools description in the catalog table**
+
+Change:
+```
+| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types | 5 | productivity |
+```
+to:
+```
+| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types | 5 | productivity |
+```
+
+**Step 3: Update the project-tools section heading description**
+
+Change:
+```
+Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types.
+```
+to:
+```
+Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types.
+```
+
+---
+
+### Task 5: Commit
+
+**Step 1: Stage all changed files**
+
+```bash
+git add plugins/project-tools/skills/create-skill/SKILL.md \
+       plugins/project-tools/.claude-plugin/plugin.json \
+       .claude-plugin/marketplace.json \
+       README.md
+```
+
+**Step 2: Commit**
+
+```bash
+git commit -m "feat: add auto skill/command type detection to create-skill
+
+Evaluates the user's description against 5 audit criteria (step count,
+context needs, tool variety, output complexity, bundled resources) to
+recommend skill vs command, with user override. Adds command scaffolding
+template alongside the existing skill template."
+```
