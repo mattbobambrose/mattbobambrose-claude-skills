@@ -1,7 +1,7 @@
 {
   "name": "project-tools",
-  "version": "1.1.0",
-  "description": "Suggest features, suggest plugins, draft commits, and scaffold new skills",
+  "version": "1.2.0",
+  "description": "Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types",
   "author": {
     "name": "mattbobambrose"
   }
