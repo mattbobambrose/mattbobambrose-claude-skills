@@ -39,7 +39,7 @@ Update a single plugin:
 | `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
 | `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills, and audit skill types | 5 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
-| `hello-world` | Generate a hello world program in any language | 1 | development |
+| `hello-world` | Generate a hello world program in any language | 1 command | development |
 | `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
 
 ## Plugins
@@ -124,8 +124,8 @@ Generate a hello world program in any language.
 /plugin install hello-world@mattbobambrose-claude-skills
 ```
 
-| Skill | Description |
-|-------|-------------|
+| Command | Description |
+|---------|-------------|
 | `/hello-world [language]` | Generate a hello world program in a specified programming language |
 
 ### summarize-progress
