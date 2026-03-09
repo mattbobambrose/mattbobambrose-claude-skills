@@ -33,8 +33,8 @@
     {
       "name": "project-tools",
       "source": "./plugins/project-tools",
-      "description": "Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, and rename plugins",
-      "version": "1.4.0",
+      "description": "Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status",
+      "version": "1.5.0",
       "author": { "name": "mattbobambrose" },
       "category": "productivity"
     },

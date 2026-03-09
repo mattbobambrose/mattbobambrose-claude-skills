@@ -37,7 +37,7 @@ Update a single plugin:
 | `code-quality` | Code review, bug finding, cleanup, naming checks, and secrets auditing | 5 | development |
 | `documentation` | Generate and maintain inline docs, API documentation, and READMEs | 3 | documentation |
 | `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
-| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, and rename plugins | 10 | productivity |
+| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status | 11 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 command | development |
 | `linear-bug-sweep` | Systematically work through Linear project issues: verify, fix, close, and track progress | 1 | productivity |
@@ -90,7 +90,7 @@ Suggest new tests and add tests to raise coverage.
 
 ### project-tools
 
-Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, and rename plugins.
+Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status.
 
 ```
 /plugin install project-tools@mattbobambrose-claude-skills
@@ -108,6 +108,7 @@ Suggest features, suggest plugins, draft commits, scaffold skills, audit skill t
 | `/changelog [plugin-name] [since-tag-or-date]` | Generate a changelog from git history grouped by plugin and version |
 | `/port-skill <source-path-or-url> <target-plugin>` | Port a skill from an external source into the marketplace with full wiring |
 | `/rename-plugin <old-name> <new-name>` | Rename a plugin across all marketplace files including directory, catalog, and README |
+| `/git-check` | Report uncommitted changes and unpushed commits in the current repo |
 
 ### kotlin-tools
 
