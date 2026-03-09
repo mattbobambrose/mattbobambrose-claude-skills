@@ -7,6 +7,7 @@ allowed-tools:
 
 - Bash
 - Read
+- Write
 - Grep
 
 ---
@@ -16,7 +17,13 @@ or reassuring messaging calibrated to how much they got done.
 
 ## Steps
 
-1. **Determine the time range**: If `$ARGUMENTS` is empty, default to today (midnight to now). Otherwise parse the
+1. **Ask the user for scope**: Before doing anything else, ask the user:
+
+   > Would you like a summary of just **this project**, or **all git repos** under your git directory?
+
+   Wait for their response before proceeding.
+
+2. **Determine the time range**: If `$ARGUMENTS` is empty, default to today (midnight to now). Otherwise parse the
    argument:
     - `today` — from midnight today to now
     - `yesterday` — the previous calendar day
@@ -28,14 +35,21 @@ or reassuring messaging calibrated to how much they got done.
 
    Compute the `--after` and `--before` timestamps for the resolved range.
 
-2. **Collect commits**: Run `git log --after="<start>" --before="<end>" --all --oneline --author` scoped to the current
-   git user (`git config user.name` or `git config user.email`). If the repository has no commits for the target
-   period, say so and skip to the messaging step.
+3. **Collect commits**:
+   - **This project only**: Run `git log` in the current working directory.
+   - **All repos**: Find the parent directory that contains multiple git repos (e.g., if the current directory is
+     `~/git/my-project`, scan `~/git/`). Discover all immediate subdirectories that contain a `.git` folder. Run
+     `git log` in each one.
 
-3. **Gather details**: For each commit, run `git show --stat <hash>` to capture the files changed, insertions, and
-   deletions. Aggregate totals for: number of commits, files changed, lines added, and lines removed.
+   In both cases, use `git log --after="<start>" --before="<end>" --all --oneline --author` scoped to the current
+   git user (`git config user.name` or `git config user.email`). If a repository has no commits for the target
+   period, skip it silently.
 
-4. **Summarize accomplishments**: Present a concise summary:
+4. **Gather details**: For each commit, run `git show --stat <hash>` to capture the files changed, insertions, and
+   deletions. Aggregate totals for: number of commits, files changed, lines added, and lines removed. When
+   summarizing all repos, track these totals per repo as well as in aggregate.
+
+5. **Summarize accomplishments**: Present a concise summary:
     - **Period**: the time range being summarized (e.g., "Tuesday, Jan 14" or "Jan 8 – Jan 14")
     - **Commits**: total count
     - **Files changed**: total unique files
@@ -46,7 +60,7 @@ or reassuring messaging calibrated to how much they got done.
     - For multi-day ranges, optionally include a **Day-by-day breakdown** showing commit counts per day if it reveals
       interesting patterns (e.g., a burst of activity on one day).
 
-5. **Closing message**: End with a short motivational paragraph (2-4 sentences) based on the period's output:
+6. **Closing message**: End with a short motivational paragraph (2-4 sentences) based on the period's output:
     - **High activity** (many commits, large diffs, broad file coverage): celebrate the productivity — acknowledge the
       hard work, highlight the breadth of impact, and encourage keeping the momentum.
     - **Moderate activity**: affirm steady progress — note that consistent work compounds over time and every commit
@@ -56,10 +70,15 @@ or reassuring messaging calibrated to how much they got done.
     - **No activity**: be warm and supportive — everyone needs rest days, and stepping away often leads to better ideas
       tomorrow.
 
+7. **Write report to file**: Write the full summary (steps 5–6) to a markdown file at
+   `reports/daily/YYYY-MM-DD.md` (using the end date of the period). Create the `reports/daily/` directory
+   if it doesn't exist. If the report spans multiple days, use the end date for the filename. Also display
+   the report in the conversation.
+
 ## Important
 
 - Only summarize commits authored by the current git user — do not include other contributors.
-- Do not make any code changes — this skill is read-only.
 - Keep the highlights concise; summarize related commits together rather than listing every commit individually.
 - The closing message should feel genuine, not generic. Reference specifics from the period's work when possible.
 - Never be sarcastic or judgmental about low-activity periods.
+- When summarizing all repos, group highlights by repo with the repo name as a subheading.
