@@ -1,6 +1,6 @@
 {
   "name": "summarize-progress",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Summarize accomplishments from git history with motivational messaging",
   "author": {
     "name": "mattbobambrose"
