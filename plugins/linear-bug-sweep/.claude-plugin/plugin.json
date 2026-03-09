@@ -1,0 +1,8 @@
+{
+  "name": "linear-bug-sweep",
+  "version": "1.0.0",
+  "description": "Systematically work through Linear project issues: verify, fix, close, and track progress",
+  "author": {
+    "name": "mattbobambrose"
+  }
+}
