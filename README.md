@@ -40,6 +40,7 @@ Update a single plugin:
 | `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types | 5 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 command | development |
+| `linear-bug-sweep` | Systematically work through Linear project issues: verify, fix, close, and track progress | 1 | productivity |
 | `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
 
 ## Plugins
@@ -127,6 +128,18 @@ Generate a hello world program in any language.
 | Command | Description |
 |---------|-------------|
 | `/hello-world [language]` | Generate a hello world program in a specified programming language |
+
+### linear-bug-sweep
+
+Systematically work through Linear project issues: verify, fix, close, and track progress.
+
+```
+/plugin install linear-bug-sweep@mattbobambrose-claude-skills
+```
+
+| Skill | Description |
+|-------|-------------|
+| `/sweep` | Systematically work through Linear issues from a project one by one — verifying, fixing, or closing each with build verification and status updates |
 
 ### summarize-progress
 

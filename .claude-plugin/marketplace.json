@@ -55,6 +55,14 @@
       "category": "development"
     },
     {
+      "name": "linear-bug-sweep",
+      "source": "./plugins/linear-bug-sweep",
+      "description": "Systematically work through Linear project issues: verify, fix, close, and track progress",
+      "version": "1.0.0",
+      "author": { "name": "mattbobambrose" },
+      "category": "productivity"
+    },
+    {
       "name": "summarize-progress",
       "source": "./plugins/summarize-progress",
       "description": "Summarize accomplishments from git history with motivational messaging",
