@@ -38,8 +38,9 @@ or reassuring messaging calibrated to how much they got done.
 3. **Collect commits**:
    - **This project only**: Run `git log` in the current working directory.
    - **All repos**: Find the parent directory that contains multiple git repos (e.g., if the current directory is
-     `~/git/my-project`, scan `~/git/`). Discover all immediate subdirectories that contain a `.git` folder. Run
-     `git log` in each one.
+     `~/git/my-project`, scan `~/git/`). Discover all directories up to 3 levels deep that contain a `.git` folder
+     (this catches nested project structures like `~/git/eo/eo-careplan-pipeline/`). Run `git log` in each one.
+     Use: `find ~/git -maxdepth 3 -name ".git" -type d` to discover repos.
 
    In both cases, use `git log --after="<start>" --before="<end>" --all --oneline --author` scoped to the current
    git user (`git config user.name` or `git config user.email`). If a repository has no commits for the target
