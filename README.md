@@ -37,7 +37,7 @@ Update a single plugin:
 | `code-quality` | Code review, bug finding, cleanup, naming checks, and secrets auditing | 5 | development |
 | `documentation` | Generate and maintain inline docs, API documentation, and READMEs | 3 | documentation |
 | `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
-| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types | 5 | productivity |
+| `project-tools` | Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, and rename plugins | 10 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 command | development |
 | `linear-bug-sweep` | Systematically work through Linear project issues: verify, fix, close, and track progress | 1 | productivity |
@@ -90,7 +90,7 @@ Suggest new tests and add tests to raise coverage.
 
 ### project-tools
 
-Suggest features, suggest plugins, draft commits, scaffold new skills or commands, and audit skill types.
+Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, and rename plugins.
 
 ```
 /plugin install project-tools@mattbobambrose-claude-skills
@@ -103,6 +103,11 @@ Suggest features, suggest plugins, draft commits, scaffold new skills or command
 | `/draft-commit [file-path]` | Draft a commit message, show changed files, and optionally commit |
 | `/create-skill <name> [description]` | Scaffold a new skill or command with correct structure, auto-determining the appropriate type |
 | `/audit-skill-type` | Analyze each skill in the marketplace and recommend whether it is better suited as a skill or command |
+| `/version-bump` | Detect which plugins changed and bump versions in both plugin.json and marketplace.json |
+| `/validate-marketplace` | Validate that marketplace.json, plugin.json files, and README are consistent and complete |
+| `/changelog [plugin-name] [since-tag-or-date]` | Generate a changelog from git history grouped by plugin and version |
+| `/port-skill <source-path-or-url> <target-plugin>` | Port a skill from an external source into the marketplace with full wiring |
+| `/rename-plugin <old-name> <new-name>` | Rename a plugin across all marketplace files including directory, catalog, and README |
 
 ### kotlin-tools
 
