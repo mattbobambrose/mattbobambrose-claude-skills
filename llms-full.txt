@@ -1,0 +1,114 @@
+# mattbobambrose-claude-skills
+
+> A community Claude Code marketplace repository containing plugins for code quality, documentation, testing, project tooling, and Kotlin development. Install with `/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills`.
+
+This is a Claude Code plugin marketplace. Plugins are installed via the Claude Code `/plugin` interface. Each plugin bundles related skills (SKILL.md files) and commands that teach Claude Code how to perform specific tasks. The marketplace catalog is defined in `.claude-plugin/marketplace.json`.
+
+## Plugins
+
+### code-quality
+
+Code review, bug finding, cleanup, naming checks, and secrets auditing. 5 skills.
+
+- `/find-bugs` — Review the codebase for bugs and write findings to bugs-summary.md
+- `/fix-bugs <bug-numbers>` — Fix specified bugs from bugs-summary.md and add tests to verify fixes
+- `/cleanup` — Scan the codebase for cleanup opportunities and apply safe fixes
+- `/check-naming [file|package|project]` — Check variable names in project source files for appropriateness and suggest improvements
+- `/check-secrets` — Check git history and working tree for committed secrets files or .env files, and ensure they are covered by .gitignore
+
+---
+
+### documentation
+
+Generate and maintain inline docs, API documentation, READMEs, and llms.txt. 5 skills.
+
+- `/add-docs [directory-or-file]` — Add inline doc comments to source files that are missing them
+- `/update-docs [output-dir]` — Create or update Markdown documentation for the project's public API and modules
+- `/update-readme` — Analyze the codebase and update the README with accurate, up-to-date content
+- `/generate-llms-txt [output-dir]` — Generate llms.txt (and optionally llms-full.txt) following the llms.txt standard for LLM-friendly project discovery
+- `/update-project-docs` — Update README.md, CLAUDE.md, and llms.txt in one pass
+
+---
+
+### testing
+
+Suggest new tests and add tests to raise coverage. 2 skills.
+
+- `/suggest-tests` — Suggest new tests to write based on existing source code and test coverage
+- `/add-tests` — Add additional tests to raise test coverage
+
+---
+
+### project-tools
+
+Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status. 11 skills/commands.
+
+- `/suggest-features` — Analyze the project and existing functionality to suggest new features worth adding
+- `/suggest-plugins` — Analyze the project and existing plugins to suggest new plugins worth adding
+- `/draft-commit [file-path]` — Draft a commit message, show changed files, and optionally commit
+- `/create-skill <name> [description]` — Scaffold a new skill or command with correct structure, auto-determining the appropriate type
+- `/audit-skill-type` — Analyze each skill in the marketplace and recommend whether it is better suited as a skill or command
+- `/version-bump` — Detect which plugins changed and bump versions in both plugin.json and marketplace.json
+- `/validate-marketplace` — Validate that marketplace.json, plugin.json files, and README are consistent and complete
+- `/changelog [plugin-name] [since-tag-or-date]` — Generate a changelog from git history grouped by plugin and version
+- `/port-skill <source-path-or-url> <target-plugin>` — Port a skill from an external source into the marketplace with full wiring
+- `/rename-plugin <old-name> <new-name>` — Rename a plugin across all marketplace files including directory, catalog, and README
+- `/git-check` — Report uncommitted changes and unpushed commits in the current repo
+
+---
+
+### kotlin-tools
+
+Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies. 2 skills.
+
+- `/add-dto [FileName.kt] [json-string]` — Create a Kotlin serializable DTO data class from a JSON string
+- `/add-dependency <group:artifact> [group:artifact ...]` — Add a Maven dependency to the Kotlin project's Gradle version catalog and build file
+
+---
+
+### hello-world
+
+Generate a hello world program in any language. 1 command.
+
+- `/hello-world [language]` — Generate a hello world program in a specified programming language
+
+---
+
+### linear-bug-sweep
+
+Systematically work through Linear project issues: verify, fix, close, and track progress. 1 skill.
+
+- `/sweep` — Systematically work through Linear issues from a project one by one — verifying, fixing, or closing each with build verification and status updates
+
+---
+
+### summarize-progress
+
+Summarize accomplishments from git history with motivational messaging. 1 skill.
+
+- `/summarize-progress [today | yesterday | last week | last month | date]` — Summarize what the user accomplished over a time period based on git history and provide motivational messaging
+
+---
+
+## Documentation
+
+### README
+
+Full plugin catalog with installation instructions and per-plugin skill listings. Install the marketplace with `/plugin marketplace add mattbobambrose/mattbobambrose-claude-skills`. Install individual plugins with `/plugin install <name>@mattbobambrose-claude-skills`. Update with `/plugin marketplace update mattbobambrose-claude-skills`.
+
+---
+
+### Contributing Guide
+
+How to create plugins, add skills, write SKILL.md frontmatter, and follow the PR checklist. Covers repository structure, plugin.json format, SKILL.md template with frontmatter fields (name, description, argument-hint, allowed-tools), and style guidelines (kebab-case names, verb-first descriptions, concise steps).
+
+---
+
+### Marketplace Catalog
+
+Machine-readable plugin registry at `.claude-plugin/marketplace.json`. Lists all 8 plugins with name, source path, description, version, author, and category. Claude Code reads this file to discover available plugins.
+
+## Optional
+
+- [Design Document](docs/plans/2026-02-26-marketplace-design.md): Original design decisions for the marketplace
+- [Implementation Plan](docs/plans/2026-02-26-marketplace-plan.md): Step-by-step build plan used to create the marketplace

@@ -7,12 +7,13 @@ This is a Claude Code plugin marketplace. Plugins are installed via the Claude C
 ## Plugins
 
 - [code-quality](plugins/code-quality/.claude-plugin/plugin.json): Code review, bug finding, cleanup, naming checks, and secrets auditing (5 skills: find-bugs, fix-bugs, cleanup, check-naming, check-secrets)
-- [documentation](plugins/documentation/.claude-plugin/plugin.json): Generate and maintain inline docs, API documentation, and READMEs (3 skills: add-docs, update-docs, update-readme)
+- [documentation](plugins/documentation/.claude-plugin/plugin.json): Generate and maintain inline docs, API documentation, READMEs, and llms.txt (5 skills: add-docs, update-docs, update-readme, generate-llms-txt, update-project-docs)
 - [testing](plugins/testing/.claude-plugin/plugin.json): Suggest new tests and add tests to raise coverage (2 skills: suggest-tests, add-tests)
-- [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest plugins, draft commits, and scaffold new skills (4 skills: suggest-features, suggest-plugins, draft-commit, create-skill)
+- [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status (11 skills: suggest-features, suggest-plugins, draft-commit, create-skill, audit-skill-type, version-bump, validate-marketplace, changelog, port-skill, rename-plugin, git-check)
 - [kotlin-tools](plugins/kotlin-tools/.claude-plugin/plugin.json): Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies (2 skills: add-dto, add-dependency)
-- [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 skill)
-- [summarize-progress](plugins/summarize-progress/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill)
+- [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 command: hello-world)
+- [linear-bug-sweep](plugins/linear-bug-sweep/.claude-plugin/plugin.json): Systematically work through Linear project issues: verify, fix, close, and track progress (1 skill: sweep)
+- [summarize-progress](plugins/summarize-progress/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill: summarize-progress)
 
 ## Documentation
 

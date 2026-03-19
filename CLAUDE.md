@@ -11,6 +11,7 @@ A Claude Code marketplace repository. Users add it with `/plugin marketplace add
 - `.claude-plugin/marketplace.json` — root catalog listing all plugins (this is what Claude Code reads to discover available plugins)
 - `plugins/<name>/.claude-plugin/plugin.json` — per-plugin metadata (name, version, description, author)
 - `plugins/<name>/skills/<skill-name>/SKILL.md` — skill definitions with YAML frontmatter and markdown body
+- `plugins/<name>/commands/<command-name>.md` — command definitions (simpler than skills, used by hello-world and project-tools/draft-commit)
 
 This repo is the **source of truth** for all skills. There is no separate skills directory or symlink.
 
@@ -36,7 +37,8 @@ Use semver: patch (1.0.0 → 1.0.1) for skill edits, minor (1.0.0 → 1.1.0) for
 1. Create `plugins/<name>/skills/<skill-name>/SKILL.md`
 2. Bump version (minor) in `plugins/<name>/.claude-plugin/plugin.json`
 3. Bump version (minor) in `.claude-plugin/marketplace.json`
-4. Update `README.md` — add skill to the plugin's table and update the skill count in the catalog table
+4. Update the plugin's `"description"` in `.claude-plugin/marketplace.json` if the new skill expands the plugin's scope
+5. Update `README.md` — add skill to the plugin's table and update the skill count in the catalog table
 
 ## When Adding a New Plugin
 

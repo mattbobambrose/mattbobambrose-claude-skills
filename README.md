@@ -35,7 +35,7 @@ Update a single plugin:
 | Plugin | Description | Skills | Category |
 |--------|-------------|--------|----------|
 | `code-quality` | Code review, bug finding, cleanup, naming checks, and secrets auditing | 5 | development |
-| `documentation` | Generate and maintain inline docs, API documentation, and READMEs | 3 | documentation |
+| `documentation` | Generate and maintain inline docs, API documentation, READMEs, and llms.txt | 5 | documentation |
 | `testing` | Suggest new tests and add tests to raise coverage | 2 | testing |
 | `project-tools` | Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status | 11 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
@@ -63,7 +63,7 @@ Code review, bug finding, cleanup, naming checks, and secrets auditing.
 
 ### documentation
 
-Generate and maintain inline docs, API documentation, and READMEs.
+Generate and maintain inline docs, API documentation, READMEs, and llms.txt.
 
 ```
 /plugin install documentation@mattbobambrose-claude-skills
@@ -74,6 +74,8 @@ Generate and maintain inline docs, API documentation, and READMEs.
 | `/add-docs [directory-or-file]` | Add inline doc comments to source files that are missing them |
 | `/update-docs [output-dir]` | Create or update Markdown documentation for the project's public API and modules |
 | `/update-readme` | Analyze the codebase and update the README with accurate, up-to-date content |
+| `/generate-llms-txt [output-dir]` | Generate llms.txt (and optionally llms-full.txt) following the llms.txt standard for LLM-friendly project discovery |
+| `/update-project-docs` | Update README.md, CLAUDE.md, and llms.txt in one pass |
 
 ### testing
 
