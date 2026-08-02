@@ -58,7 +58,7 @@
       "name": "learning",
       "source": "./plugins/learning",
       "description": "Build a personalized course repo on any subject, write lessons on demand, and quiz yourself",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": { "name": "mattbobambrose" },
       "category": "productivity"
     },

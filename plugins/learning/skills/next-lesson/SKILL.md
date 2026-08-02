@@ -11,6 +11,7 @@ allowed-tools:
 - Glob
 - WebSearch
 - WebFetch
+- AskUserQuestion
 
 ---
 
@@ -30,8 +31,8 @@ With no argument, the first outlined module is written.
     says it has not been written yet is `outlined`, any other is `written` — then show the user the reconstructed
     state before continuing. `answers` and `class` cannot be recovered from the filesystem: ask the user which class
     the course is, and if `answers` cannot be recovered, re-ask the round-1 questions (motivation, current level, time
-    budget, and preferred style). Offer to rewrite `.teach-me/course.md` from the reconstructed state, and do so
-    before continuing.
+    budget, and preferred style) in a single `AskUserQuestion` batch. Offer to rewrite `.teach-me/course.md` from the
+    reconstructed state, and do so before continuing.
 
 2. **Pick the module**: Match `$ARGUMENTS` against module ids, numbers, and titles. With no argument, take the first
    module with `status: outlined`. If every module is already written, say so and stop. If the requested module is
