@@ -74,6 +74,16 @@ Generate a hello world program in any language. 1 command.
 
 ---
 
+### learning
+
+Build a personalized course repo on any subject, write lessons on demand, and quiz yourself. 3 skills.
+
+- `/teach-me [topic]` — Build a personalized course repo that teaches a subject from history and fundamentals through advanced application
+- `/next-lesson [module]` — Write out the next outlined module in a course repo created by teach-me
+- `/quiz-me [module]` — Quiz the user on written modules of a course repo and record the results
+
+---
+
 ### linear-bug-sweep
 
 Systematically work through Linear project issues: verify, fix, close, and track progress. 1 skill.

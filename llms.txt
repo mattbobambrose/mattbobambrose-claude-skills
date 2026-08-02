@@ -12,6 +12,7 @@ This is a Claude Code plugin marketplace. Plugins are installed via the Claude C
 - [project-tools](plugins/project-tools/.claude-plugin/plugin.json): Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status (11 skills: suggest-features, suggest-plugins, draft-commit, create-skill, audit-skill-type, version-bump, validate-marketplace, changelog, port-skill, rename-plugin, git-check)
 - [kotlin-tools](plugins/kotlin-tools/.claude-plugin/plugin.json): Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies (2 skills: add-dto, add-dependency)
 - [hello-world](plugins/hello-world/.claude-plugin/plugin.json): Generate a hello world program in any language (1 command: hello-world)
+- [learning](plugins/learning/.claude-plugin/plugin.json): Build a personalized course repo on any subject, write lessons on demand, and quiz yourself (3 skills: teach-me, next-lesson, quiz-me)
 - [linear-bug-sweep](plugins/linear-bug-sweep/.claude-plugin/plugin.json): Systematically work through Linear project issues: verify, fix, close, and track progress (1 skill: sweep)
 - [summarize-progress](plugins/summarize-progress/.claude-plugin/plugin.json): Summarize accomplishments from git history with motivational messaging (1 skill: summarize-progress)
 
