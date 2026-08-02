@@ -22,10 +22,8 @@ NN-<slug>/
   solutions/       one file per exercise, idiomatic and commented
 ```
 
-Also write at the repo root a `sandbox/` directory holding a minimal runnable setup for the technology — a compose
-file, config, or starter project — so the learner can try things immediately. `sandbox/` is written once, the first
-time a module needs it, and reused by every later module rather than rebuilt per module. Document the exact command
-that brings it up in `README.md`.
+Also write at the repo root a `sandbox/` holding a minimal runnable setup (compose file, config, or starter project)
+so the learner can try things immediately. Document the exact command that brings it up in `README.md`.
 
 ## Lesson Shape
 
@@ -42,4 +40,4 @@ Every command and config block must be complete enough to run as shown against `
 config the learner is meant to type. Match the `depth` answer: "use it confidently" stays at the interface the
 learner drives directly, "understand how it works internally" opens up the mechanism underneath, "operate it in
 production" adds capacity planning, upgrades, and on-call reality. If `ops_scope` is yes, every module ends with an
-operations note — what to watch, what to alert on, what breaks first at scale.
+operations note.
