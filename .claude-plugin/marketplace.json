@@ -55,6 +55,14 @@
       "category": "development"
     },
     {
+      "name": "learning",
+      "source": "./plugins/learning",
+      "description": "Build a personalized course repo on any subject, write lessons on demand, and quiz yourself",
+      "version": "1.0.0",
+      "author": { "name": "mattbobambrose" },
+      "category": "productivity"
+    },
+    {
       "name": "linear-bug-sweep",
       "source": "./plugins/linear-bug-sweep",
       "description": "Systematically work through Linear project issues: verify, fix, close, and track progress",

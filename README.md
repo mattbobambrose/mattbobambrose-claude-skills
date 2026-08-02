@@ -40,6 +40,7 @@ Update a single plugin:
 | `project-tools` | Suggest features, suggest plugins, draft commits, scaffold skills, audit skill types, validate marketplace, bump versions, generate changelogs, port skills, rename plugins, and check git status | 11 | productivity |
 | `kotlin-tools` | Kotlin/Gradle utilities — generate DTOs from JSON and add Maven dependencies | 2 | development |
 | `hello-world` | Generate a hello world program in any language | 1 command | development |
+| `learning` | Build a personalized course repo on any subject, write lessons on demand, and quiz yourself | 3 | productivity |
 | `linear-bug-sweep` | Systematically work through Linear project issues: verify, fix, close, and track progress | 1 | productivity |
 | `summarize-progress` | Summarize accomplishments from git history with motivational messaging | 1 | productivity |
 
@@ -136,6 +137,20 @@ Generate a hello world program in any language.
 | Command | Description |
 |---------|-------------|
 | `/hello-world [language]` | Generate a hello world program in a specified programming language |
+
+### learning
+
+Build a personalized course repo on any subject, write lessons on demand, and quiz yourself.
+
+```
+/plugin install learning@mattbobambrose-claude-skills
+```
+
+| Skill | Description |
+|-------|-------------|
+| `/teach-me [topic]` | Build a personalized course repo that teaches a subject from history and fundamentals through advanced application |
+| `/next-lesson [module]` | Write out the next outlined module in a course repo created by teach-me |
+| `/quiz-me [module]` | Quiz the user on written modules of a course repo and record the results |
 
 ### linear-bug-sweep
 
