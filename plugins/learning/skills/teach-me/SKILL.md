@@ -26,9 +26,9 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
 
 **Ground the material selectively**: Use WebSearch and WebFetch for the content most likely to be wrong or stale —
 `00-context` dates, creators, and adoption claims; install steps and current stable versions; current best
-practices; and the safety-sensitive content called out in the `fitness` and `cooking` class files. Core concepts,
-worked examples, and exercises come from your own knowledge. Every Further Reading link must be fetched and
-confirmed to exist before you write it down.
+practices; and the safety-sensitive content called out in the `fitness`, `cooking`, and `physical-skill` class
+files. Core concepts, worked examples, and exercises come from your own knowledge. Every Further Reading link must
+be fetched and confirmed to exist before you write it down.
 
 ## Steps
 

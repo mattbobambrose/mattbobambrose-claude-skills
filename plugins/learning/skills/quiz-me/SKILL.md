@@ -45,6 +45,11 @@ score.
     If the user picks "A specific module", ask which one — listing the written modules — before generating any
     questions.
 
+    Marking a module `completed` in step 7 needs at least three of its questions answered. If the chosen scope and
+    length cannot give three questions to every module in scope, say so before generating anything and offer the
+    two ways out: raise the question count, or narrow the scope to fewer modules. If the user would rather go ahead
+    anyway, do — just tell them which modules will be quizzed but left unmarked.
+
 3. **Read the material**: Read the full `README.md` and practice directories of every module in scope. Questions must
    come from what the course actually says, not from general knowledge about the topic.
 
