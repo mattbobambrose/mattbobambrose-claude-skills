@@ -26,7 +26,10 @@ score.
 
     If the file exists but cannot be parsed, fall back to scanning module directories — a directory whose `README.md`
     says it has not been written yet is `outlined`, any other is `written` — and show the user the reconstructed state
-    before continuing.
+    before continuing. `answers` and `class` cannot be recovered from the filesystem: ask the user which class the
+    course is, and use `generic` if they cannot supply one. If `answers` cannot be recovered, re-ask the round-1
+    questions (motivation, current level, time budget, and preferred style). Offer to rewrite `.teach-me/course.md`
+    from the reconstructed state, and do so before continuing.
 
     Collect the modules with `status: written` — only these are quizzable. If none are written, say so and point at
     `/next-lesson`.
@@ -38,6 +41,9 @@ score.
     |----------|---------|
     | What should I quiz you on? | The most recent module / All written modules / A specific module |
     | How many questions? | 5 / 10 / 20 |
+
+    If the user picks "A specific module", ask which one — listing the written modules — before generating any
+    questions.
 
 3. **Read the material**: Read the full `README.md` and practice directories of every module in scope. Questions must
    come from what the course actually says, not from general knowledge about the topic.
@@ -65,7 +71,8 @@ score.
 
 7. **Update state**: For each module in scope, if the user scored 80% or better on the questions drawn from that
    module, set `completed: true` in `.teach-me/course.md` and tick it in the progress checklist. Below 80%, leave it
-   and name the sections to revisit.
+   and name the sections to revisit. Only modules with at least three questions drawn from them are eligible to be
+   marked `completed` — with fewer than three, leave the module alone regardless of the score.
 
 8. **Report**: Give the score, the strongest and weakest areas, and a concrete next step — revisit a section, or run
    `/next-lesson`.
@@ -77,4 +84,6 @@ score.
 - Ask one question per message and wait for the answer. Never dump the whole quiz at once.
 - Never reveal the answer before the user has responded.
 - Never stage, commit, or push.
+- Grading explanations stay inside what the module says. Never introduce a food-safety figure, a training load, or a
+  medical or nutritional claim that is not already written and cited in the course material.
 - Grading is for the learner's benefit, not a gate — be accurate about what was wrong, without padding or harshness.

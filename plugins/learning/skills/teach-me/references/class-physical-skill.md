@@ -4,7 +4,7 @@
 
 | Question | Options | `answers` key |
 |---|---|---|
-| Where are you now? | Never tried / Beginner / Plateaued at intermediate / Returning after a break | `level` |
+| Where are you now? | Never tried / Beginner / Plateaued at intermediate / Returning after a break | `skill_level` |
 | Competing or recreational? | Competing / Recreational but want to be good / Casual | `intent` |
 | How often can you practice? | Once a week / 2–3 times / 4+ times | `frequency` |
 | What access do you have? | (free text — court, gym, wall, coach, partner) | `access` |
@@ -17,6 +17,8 @@ NN-<slug>/
   drills/           one file per drill: setup, reps, what good looks like, common error
   practice-log/     a dated template the learner fills in after sessions
 ```
+
+Also write `DISCLAIMER.md` at the repo root.
 
 ## Lesson Shape
 
@@ -31,6 +33,9 @@ Each module `README.md` runs in this order:
 
 ### Required safety handling
 
+- `DISCLAIMER.md` states that the material is general skill instruction rather than coaching or medical advice, that
+  technique carries injury risk that rises with fatigue and with skipped progression, and that the learner should get
+  qualified in-person instruction for any technique carrying fall, impact, or water risk.
 - Every drill names its prerequisite drill.
 - Warn where a technique carries injury risk if drilled while fatigued or without progression, and say what to do
   instead.

@@ -5,7 +5,7 @@
 | Question | Options | `answers` key |
 |---|---|---|
 | What do you want to be able to cook? | (free text) | `goal_output` |
-| Current comfort in a kitchen? | Barely cook / Follow recipes fine / Improvise already | `level` |
+| Current comfort in a kitchen? | Barely cook / Follow recipes fine / Improvise already | `kitchen_level` |
 | Equipment? | (free text — oven, stand mixer, wok, scale, thermometer) | `equipment` |
 | Any dietary constraints or allergies? | (free text, or none) | `constraints` |
 

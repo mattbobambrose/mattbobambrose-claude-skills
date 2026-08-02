@@ -29,6 +29,10 @@ Each module `README.md` runs in this order:
 5. **Case study and worksheet pointers** — pointers into `case-studies/` and `worksheets/`.
 6. **Further Reading** — verified links plus the standard professional references.
 
-If `context` names a jurisdiction, the module must say explicitly that rules vary by jurisdiction and that the
-material is general education, not professional advice for a specific situation. It must not give the reader a
-course of action for their own legal, tax, or financial matter.
+For law, tax, accounting, finance, and regulatory topics, the module must say explicitly that the material is general
+education, not professional advice for a specific situation — regardless of what `context` says, including when it is
+blank. If `context` names a jurisdiction, the module must also say that rules vary by jurisdiction. It must not give
+the reader a course of action for their own legal, tax, or financial matter.
+
+If `certification` names one, align the module list with that certification's published syllabus, so the course covers
+its examinable areas in an order the learner can study against.

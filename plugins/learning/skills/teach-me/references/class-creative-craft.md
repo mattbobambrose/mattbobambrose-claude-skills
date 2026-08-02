@@ -29,4 +29,8 @@ Each module `README.md` runs in this order:
 5. **Studies and project pointers** — pointers into `studies/` and `portfolio/`.
 6. **Further Reading** — plus named artists, works, or recordings to study.
 
+Match the `practice_style` answer: "drills first, projects later" weights each module toward `studies/` and holds
+`portfolio/` pieces until later modules, "learn through projects" weights `portfolio/` and includes only the studies a
+project needs, and "mix" gives both roughly equal weight in every module.
+
 Every study states what "done" looks like — creative work needs an explicit stopping condition.

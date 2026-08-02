@@ -22,14 +22,24 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
 
 **$ARGUMENTS** is the topic to learn. If empty, ask the user what they want to learn before doing anything else.
 
+## Grounding
+
+**Ground the material selectively**: Use WebSearch and WebFetch for the content most likely to be wrong or stale —
+`00-context` dates, creators, and adoption claims; install steps and current stable versions; current best
+practices; and the safety-sensitive content called out in the `fitness` and `cooking` class files. Core concepts,
+worked examples, and exercises come from your own knowledge. Every Further Reading link must be fetched and
+confirmed to exist before you write it down.
+
 ## Steps
 
 1. **Determine the topic**: Use `$ARGUMENTS`. If empty, ask what the user wants to learn and wait for an answer.
 
-2. **Classify the topic**: Read `references/topic-classes.md` and pick the best-matching class. State the guess in one
-   line and invite correction, e.g. "Treating *bread baking* as a **cooking** topic — say so if you'd rather it be
-   something else." Then read the matching `references/class-<class>.md` file in full. Do not proceed until the class
-   is settled.
+2. **Classify the topic**: Read `${CLAUDE_PLUGIN_ROOT}/skills/teach-me/references/topic-classes.md` and pick the
+   best-matching class. State the guess in one line and invite correction, e.g. "Treating *bread baking* as a
+   **cooking** topic — say so if you'd rather it be something else." Then read the matching
+   `${CLAUDE_PLUGIN_ROOT}/skills/teach-me/references/class-<class>.md` file in full. These reference files live in
+   this skill's own directory, not in the course directory being written into. Do not proceed until the class is
+   settled.
 
 3. **Round 1 — universal questions**: Ask these four in a single `AskUserQuestion` batch.
 
@@ -54,9 +64,6 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
     | Empty, or contains only `.git/`, `README.md`, `LICENSE`, `.gitignore` | Write in place |
     | Contains any other content | Propose `./<topic-slug>-learning/` and confirm before writing |
 
-    Check for a git repository with `git rev-parse --git-dir`. If there is none, run `git init` in the target
-    directory. Never stage, commit, or push.
-
 6. **Draft the lesson plan and confirm it**: Choose the module count from the time budget.
 
     | Time budget | Modules after `00-context` |
@@ -75,6 +82,7 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
     README.md              lesson plan, prerequisites, how to use this repo, module index
     resources.md           books, courses, communities, docs — verified links only
     .teach-me/course.md    course state
+    <class root files>     from the class file's Folder Layout — toolchain files, sandbox/, DISCLAIMER.md
     00-context/README.md   FULL
     01-<slug>/             FULL — README.md plus the class's practice directories
     02-<slug>/README.md    OUTLINED
@@ -82,6 +90,13 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
     NN-capstone/README.md  OUTLINED
     ```
 
+    - Before writing any files, check for a git repository with `git rev-parse --git-dir`. If there is none, run
+      `git init` in the target directory. Never stage, commit, or push.
+    - Do the grounding searches described in the **Grounding** section before writing each section, not after.
+    - Class-specific root files come from the class file's **Folder Layout** section. The cases are: the toolchain
+      files `class-programming-language.md` requires when `toolchain_setup` is yes (build manifest, a `.gitignore`
+      for the language, a formatter or linter config, and a runnable `hello` target), the `sandbox/` directory
+      `class-technology.md` requires unconditionally, and `DISCLAIMER.md`.
     - `00-context/README.md` is always written in full and always covers: origin and history, who created it and why,
       what problems it solves, where it is used today, the surrounding ecosystem, honest tradeoffs and criticisms, and
       how it compares to its main alternatives.
@@ -91,7 +106,8 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
     - Every other module gets a stub `README.md` containing: title, learning objectives, a topic outline,
       prerequisites (which module comes first), estimated time, and a closing line stating it has not been written yet
       and that `/next-lesson` will fill it in.
-    - Classes `fitness` and `cooking` also get a `DISCLAIMER.md` at the repo root, per their class file.
+    - Classes `fitness`, `cooking`, and `physical-skill` also get a `DISCLAIMER.md` at the repo root, per their class
+      file.
 
 8. **Write `.teach-me/course.md`**: YAML frontmatter for state, markdown body for a human-tickable checklist.
 
@@ -108,6 +124,8 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
       style: hands-on
       prior_languages: [Python, Java]
       target_domain: compilers
+      toolchain_setup: true
+      idiomatic_depth: production
     modules:
       - {id: "00-context", title: "History and Context", status: written}
       - {id: "01-basics",  title: "Basics",              status: written}
@@ -116,23 +134,18 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
 
     ## Progress
 
-    - [x] 00 History and Context
-    - [x] 01 Basics
+    - [ ] 00 History and Context
+    - [ ] 01 Basics
     - [ ] 02 Syntax and Types
     ```
 
     - `status` is `written` or `outlined`. `completed: true` is added later by `/quiz-me` or by the user.
-    - Record every round-1 and round-2 answer under `answers`, using the class file's key names.
+    - Record every round-1 and round-2 answer under `answers`, using the class file's key names. The round-1 keys are
+      `motivation`, `level`, `time_budget`, and `style`, and class-file keys must never reuse them.
     - Get the date from `date +%Y-%m-%d` via Bash — never guess it.
 
-9. **Ground the material selectively**: Use WebSearch and WebFetch for the content most likely to be wrong or stale —
-   `00-context` dates, creators, and adoption claims; install steps and current stable versions; current best
-   practices; and the safety-sensitive content called out in the `fitness` and `cooking` class files. Core concepts,
-   worked examples, and exercises come from your own knowledge. Every Further Reading link must be fetched and
-   confirmed to exist before you write it down.
-
-10. **Report**: State what was created and where, which modules are written vs outlined, and that `/next-lesson`
-    writes the next module and `/quiz-me` tests what exists.
+9. **Report**: State what was created and where, which modules are written vs outlined, and that `/next-lesson`
+   writes the next module and `/quiz-me` tests what exists.
 
 ## Important
 
@@ -143,6 +156,6 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
 - Do not write later modules in full. Outlined stubs are deliberate — they let `/next-lesson` adapt to the learner's
   actual progress.
 - Get approval on the lesson plan in step 6 before writing any course files.
-- `fitness` and `cooking` courses must include `DISCLAIMER.md`. Fitness material stays at the level of general
-  training principles and never prescribes medical, rehabilitative, or nutritional treatment. Cooking food-safety
-  figures must be cited to a named authoritative source.
+- `fitness`, `cooking`, and `physical-skill` courses must include `DISCLAIMER.md`. Fitness material stays at the level
+  of general training principles and never prescribes medical, rehabilitative, or nutritional treatment. Cooking
+  food-safety figures must be cited to a named authoritative source.
