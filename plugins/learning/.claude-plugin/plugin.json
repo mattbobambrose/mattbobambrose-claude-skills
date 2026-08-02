@@ -1,0 +1,8 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "Build a personalized course repo on any subject, then write lessons and quiz yourself",
+  "author": {
+    "name": "mattbobambrose"
+  }
+}
