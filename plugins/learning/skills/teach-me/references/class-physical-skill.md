@@ -29,5 +29,8 @@ Each module `README.md` runs in this order:
 5. **How this fits into play or competition**.
 6. **Further Reading** — verified links plus named coaches or instructional sources.
 
-Every drill names its prerequisite drill. Warn where a technique carries injury risk if drilled while fatigued or
-without progression, and say what to do instead.
+### Required safety handling
+
+- Every drill names its prerequisite drill.
+- Warn where a technique carries injury risk if drilled while fatigued or without progression, and say what to do
+  instead.
