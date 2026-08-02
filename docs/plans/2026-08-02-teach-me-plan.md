@@ -191,8 +191,9 @@ fully written first module, and outlined stubs for the rest. `/next-lesson` fill
     - `00-context/README.md` is always written in full and always covers: origin and history, who created it and why,
       what problems it solves, where it is used today, the surrounding ecosystem, honest tradeoffs and criticisms, and
       how it compares to its main alternatives.
-    - Module `01` is written in full: lesson prose, worked examples, and the practice directories named in the class
-      file's **Folder Layout** section, populated with real content.
+    - Module `01` is written in full, following the section order given in the class file's **Lesson Shape** section:
+      lesson prose, worked examples, and the practice directories named in the class file's **Folder Layout** section,
+      populated with real content.
     - Every other module gets a stub `README.md` containing: title, learning objectives, a topic outline,
       prerequisites (which module comes first), estimated time, and a closing line stating it has not been written yet
       and that `/next-lesson` will fill it in.
